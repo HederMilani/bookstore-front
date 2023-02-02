@@ -1,0 +1,11 @@
+.container {
+	height: 85%;
+}
+
+.list {
+	align-items: center;
+}
+
+i {
+	padding: 0.3rem;
+}
