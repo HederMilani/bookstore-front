@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
@@ -36,7 +37,8 @@ import { CategoriaReadComponent } from './components/view/categoria/categoria-re
 	MatListModule,
 	MatIconModule,
 	MatCardModule,
-	MatTableModule
+	MatTableModule,
+	HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
