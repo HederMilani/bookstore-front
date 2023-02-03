@@ -11,7 +11,7 @@ export class CategoriaReadComponent {
 
 	categorias: Categoria[] = [];
 
-	displayedColumns: string[] = ['id', 'name', 'description', 'action'];
+	displayedColumns: string[] = ['id', 'name', 'description', 'livros', 'action'];
 
 	constructor(private service: CategoriaService) {  }
 

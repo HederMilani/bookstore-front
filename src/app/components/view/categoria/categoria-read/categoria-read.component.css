@@ -1,41 +1,63 @@
 .content {
-	width: 90%;
-	margin: 1.4rem auto auto auto;
+  width: 90%;
+  margin: 1.4rem auto auto auto;
 }
 
 .title {
-	text-align: center;
-	margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .title h1 {
-	font-size: 2rem;
-	color: rgb(212, 207, 207);
-	font-weight: 500;
+  font-size: 2rem;
+  color: rgb(212, 207, 207);
+  font-weight: 500;
+}
+.nova-cat {
+	margin-bottom: .5rem;
+}
+
+.livros {
+  color: rgb(54, 218, 240);
+  margin-left: 0.5rem;
+}
+
+.edit {
+  color: rgb(206, 173, 24);
+  margin-right: 0.5rem;
+}
+
+.delete {
+  color: rgb(228, 56, 56);
+  margin-right: 0.5rem;
+}
+
+.mat-header-cell {
+  width: 8rem;
 }
 
 .table {
-	width: 100%;
-  }
-  
-  .mat-column-demo-position {
-	width: 32px;
-	border-right: 1px solid currentColor;
-	padding-right: 24px;
-	text-align: center;
-  }
-  
-  .mat-column-demo-name {
-	padding-left: 16px;
-	font-size: 20px;
-  }
-  
-  .mat-column-demo-weight {
-	font-style: italic;
-  }
-  
-  .mat-column-demo-symbol {
-	width: 32px;
-	text-align: center;
-	font-weight: bold;
-  }
+  width: 100%;
+}
+
+.mat-column-demo-position {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.mat-column-demo-name {
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.mat-column-demo-weight {
+  font-style: italic;
+}
+
+.mat-column-demo-symbol {
+  width: 32px;
+  text-align: center;
+  font-weight: bold;
+}
