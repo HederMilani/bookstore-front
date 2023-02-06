@@ -1,1 +1,17 @@
-<p>categoria-delete works!</p>
+<form>
+	<h1>Deletar Categoria</h1>
+
+	<mat-form-field class="form">
+		<mat-label>Name</mat-label>
+		<input matInput [(ngModel)]="categoria.name" type="text" name="name" placeholder="" disabled>
+	</mat-form-field>
+	<mat-form-field class="form">
+		<mat-label>Description</mat-label>
+		<textarea matInput [(ngModel)]="categoria.description" type="text" name="description" placeholder="" disabled></textarea>
+	</mat-form-field>
+
+	<div class="buttons">
+		<button  class="mat-elevation-z8" mat-stroked-button color="primary">Deletar</button>
+		<button  class="mat-elevation-z8" mat-stroked-button color="warn">Cancelar</button>
+	</div>
+</form>
