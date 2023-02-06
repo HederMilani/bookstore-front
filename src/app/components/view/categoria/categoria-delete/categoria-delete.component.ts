@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Categoria } from '../categoria.model';
 import { CategoriaService } from '../categoria.service';
 
@@ -16,7 +16,7 @@ export class CategoriaDeleteComponent {
 		description: ''
 	}
 
-	constructor( private service: CategoriaService, private route: ActivatedRoute) {}
+	constructor( private service: CategoriaService, private route: ActivatedRoute, private router: Router) {}
 
 	ngOnInit(): void {
 		//Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -30,6 +30,19 @@ export class CategoriaDeleteComponent {
 			this.categoria = resposta;
 			console.log(this.categoria);
 		})
+	}
+
+	delete(): void {
+		this.service.delete(this.categoria.id!).subscribe((resposta) => {
+			this.service.mensagem("Categoria Deletada com Sucesso");
+			this.router.navigate(['categorias']);
+		}, err => {
+			this.service.mensagem(err.error.error);
+		});
+	}
+
+	cancel(): void {
+		this.router.navigate(['categorias']);
 	}
 
 }
