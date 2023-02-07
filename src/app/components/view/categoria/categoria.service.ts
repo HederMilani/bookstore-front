@@ -5,7 +5,6 @@ import { Observable } from "rxjs";
 import { environment } from "src/environments/environment";
 import { Categoria } from "./categoria.model";
 
-
 @Injectable({
   providedIn: "root",
 })
@@ -15,30 +14,35 @@ export class CategoriaService {
   constructor(private http: HttpClient, private _sanack: MatSnackBar) {}
 
   findAll(): Observable<Categoria[]> {
-	const url = `${this.baseUrl}/categoria`;
+    const url = `${this.baseUrl}/categoria`;
     return this.http.get<Categoria[]>(url);
   }
 
   findById(id: String): Observable<Categoria> {
-	const url = `${this.baseUrl}/categoria/${id}`;
-	return this.http.get<Categoria>(url);
+    const url = `${this.baseUrl}/categoria/${id}`;
+    return this.http.get<Categoria>(url);
   }
-  
-  create(categoria: Categoria): Observable<Categoria>{
-	const url = `${this.baseUrl}/categoria`;
-	return this.http.post<Categoria>(url, categoria);
+
+  create(categoria: Categoria): Observable<Categoria> {
+    const url = `${this.baseUrl}/categoria`;
+    return this.http.post<Categoria>(url, categoria);
   }
 
   delete(id: String): Observable<void> {
-	const url = `${this.baseUrl}/categoria/${id}`;
-	return this.http.delete<void>(url);
+    const url = `${this.baseUrl}/categoria/${id}`;
+    return this.http.delete<void>(url);
   }
 
-  mensagem(str: String): void{
-	this._sanack.open(`${str}`, `Ok`, {
-		horizontalPosition: 'start',
-		verticalPosition: 'bottom',
-		duration: 3000
-	});
+  update(categoria: Categoria): Observable<void> {
+	const url = `${this.baseUrl}/categoria/${categoria.id}`
+	return this.http.put<void>(url, categoria);
+  }
+
+  mensagem(str: String): void {
+    this._sanack.open(`${str}`, `Ok`, {
+      horizontalPosition: "start",
+      verticalPosition: "bottom",
+      duration: 3000,
+    });
   }
 }
